@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+/* Navbar starts here! */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(174, 174, 174, 0.653);
+  overflow-x: hidden;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.background-image {
+  background-image: url(./images/code.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+}
+
+.nav-container h2 {
+  color: chocolate;
+  border: none;
+  border-radius: 3px;
+  background-color: rgba(172, 172, 172, 0.281);
+  padding: .6rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.name-logo-linked {
+  text-decoration: none;
+}
+
+.nav-container h2 span {
+  color: rgba(66, 2, 66, 0.678);
+}
+
+.nav-items{
+margin-left: -24rem;
+}
+
+
+.nav-items ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-items ul li {
+  list-style: none;
+}
+
+.nav-item-linked,
+.contact-link-btn {
+  text-decoration: none;
+  font-size: .9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact-btn {
+  padding: .6rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-btn:hover,
+.contact-link-btn:hover {
+  background-color: aqua;
+  color: #fff;
+}
+
+.font-icon:hover {
+  color: blue;
+}
+
+/* Hamburger menu here! */
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  display: none;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  transform: scale(-1);
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.two {
+  width: 70%;
+}
+
+.three {
+  width: 40%;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* INTRO HERE! */
+.intro-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  max-width: 600px;
+  border: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.intro-container h5{
+  border-bottom: 2px solid chocolate;
+  padding-bottom: .5rem;
+}
+
+.intro-container p{
+  border-bottom: 2px solid chocolate ;
+  border-top: 2px solid chocolate;
+  padding: .5rem 0;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animated-h1 {
+  animation: slideInFromLeft 2s ease-in-out forwards;
+}
+
+
+/* About Me here! */
+.about-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.left-side-about{
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  padding: 1.5rem;
+  box-shadow: 0 0 8px 0 gray;
+}
+
+.left-side-head{
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  width: 100%;
+}
+
+.left-side-head h2{
+  font-size: 2rem;
+  border-bottom: 2px solid gray;
+  margin-bottom: 1rem;
+  padding-bottom: .4rem;
+  width: fit-content;
+  margin-left: 12rem;
+}
+
+.socials{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.social-whatsapp, .social-email{
+display: flex;
+align-items: center;
+gap: .4rem;
+border-radius: 3px;
+background-color: #e6e6e6;
+padding: .2rem .8rem;
+}
+
+.profile-image{
+  width: 22rem;
+  height: 22rem;
+  border-radius: 3px;
+}
+
+.about-text{
+  line-height: 1.8;
+}
+
+.social-linked{
+  text-decoration: none;
+}
+
